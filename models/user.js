@@ -13,7 +13,8 @@ const UserSchema = mongoose.Schema({
     },
     username: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     password: {
         type: String,
@@ -42,4 +43,12 @@ module.exports.addUser = function(newUser, callback){
             newUser.save(callback);
         })
     })
+}
+
+module.exports.comparePassword = function(candidatePassword, hash, callback){
+    bcrypt.compare(candidatePassword, hash, (err, isMatch) => {
+        if(err) throw err;
+
+        callback(null, isMatch);
+    });
 }
