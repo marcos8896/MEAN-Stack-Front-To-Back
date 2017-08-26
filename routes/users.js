@@ -64,7 +64,14 @@ router.post('/authenticate', (req, res, next) => {
 
 //Profile
 router.get('/profile', passport.authenticate('jwt', {session: false}), (req, res, next) => {
-    res.json({user: req.user});
+    let user = req.user;
+    
+        res.json({user: {
+            _id: user._id,
+            name: user.name,
+            email: user.email,
+            username: user.username
+        }});
 });
 
 module.exports = router;
