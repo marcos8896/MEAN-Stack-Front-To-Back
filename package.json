@@ -1,0 +1,36 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "MEAN Stack authentication app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "*",
+    "mongoose": "*",
+    "bcryptjs": "*",
+    "cors": "*",
+    "jsonwebtoken": "*",
+    "body-parser": "*",
+    "passport": "*",
+    "passport-jwt": "*" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcos8896/MEAN-Stack-Front-To-Back.git"
+  },
+  "keywords": [
+    "node",
+    "javascript",
+    "angular",
+    "angular4"
+  ],
+  "author": "Marcos Barrera del Río",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcos8896/MEAN-Stack-Front-To-Back/issues"
+  },
+  "homepage": "https://github.com/marcos8896/MEAN-Stack-Front-To-Back#readme"
+}
