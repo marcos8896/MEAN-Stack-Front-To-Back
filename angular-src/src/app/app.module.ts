@@ -13,6 +13,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
 import { ValidateService } from './services/validate.service';
+import { ConfigUrlService } from './services/config-url.service';
+import { AuthService } from './services/auth.service';
+
 
 import { FlashMessagesModule } from 'angular2-flash-messages';
 
@@ -41,7 +44,7 @@ const appRoutes: Routes = [
     FlashMessagesModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ValidateService],
+  providers: [ValidateService, ConfigUrlService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
