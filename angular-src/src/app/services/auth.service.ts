@@ -24,12 +24,12 @@ export class AuthService {
   }
 
   registerUser(user){
-    return this.http.post(`${this.url}/users/register`, user, {headers: this.headers})
+    return this.http.post(`users/register`, user, {headers: this.headers})
       .map(res => res.json());
   }
 
   authenticateUser(user){
-    return this.http.post(`${this.url}/users/authenticate`, user, {headers: this.headers})
+    return this.http.post(`users/authenticate`, user, {headers: this.headers})
     .map(res => res.json());
 
   }
@@ -40,7 +40,7 @@ export class AuthService {
     let headers = new Headers();
     headers.append('Authorization', this.authToken);
 
-    return this.http.get(`${this.url}/users/profile`, {headers})
+    return this.http.get(`users/profile`, {headers})
     .map(res => res.json());
   }
 
